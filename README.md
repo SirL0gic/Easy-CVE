@@ -15,3 +15,11 @@ then:
 ```
 ln -s `pwd`/scipag_vulscan /usr/share/nmap/scripts/vulscan  
 ```
+then clone this repo and change permissions for easy-cve.sh like this:
+```
+chmod +x easy-cve.sh
+```
+then run the script
+```
+./easy-cve.sh
+```
