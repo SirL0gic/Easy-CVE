@@ -9,5 +9,6 @@ Nmap\scripts\vulscan\*
 Clone the GitHub repository like this:
 
 git clone https://github.com/scipag/vulscan scipag_vulscan
-then
+
+then: 
 ln -s `pwd`/scipag_vulscan /usr/share/nmap/scripts/vulscan  
