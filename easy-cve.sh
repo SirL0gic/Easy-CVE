@@ -25,9 +25,9 @@ if [ $option = "1" ]
              if [ $save = "y" ]
                 then
                 read -p  "[+]Location: " savelocation
-                echo "$(nmap -oN $savelocation -sV -A --script=vulners.nse $ip -p $port)" 
+                echo "$(nmap -oN $savelocation -Pn -sV -A --script=vulners.nse $ip -p $port)" 
             else
-                echo "$(nmap -sV -A --script=vulners.nse $ip -p $port)" 
+                echo "$(nmap -Pn  -sV -A --script=vulners.nse $ip -p $port)" 
                 fi
             
        
@@ -36,9 +36,9 @@ if [ $option = "1" ]
             if [ $save = "y" ]
                     then
                     read -p  "[+]Location: " savelocation
-                    echo "$(nmap -oN $savelocation -sV -A --script=vulners.nse $ip)" 
+                    echo "$(nmap -Pn  -oN $savelocation -sV -A --script=vulners.nse $ip)" 
                 else
-                    echo "$(nmap -sV -A --script=vulners.nse $ip)" 
+                    echo "$(nmap -Pn  -sV -A --script=vulners.nse $ip)" 
                     fi
 fi
     
@@ -56,9 +56,9 @@ elif [ $option = "2" ]
              if [ $save = "y" ]
                 then
                 read -p  "[+]Location: " savelocation
-                echo "$(nmap -oN $savelocation -sV -A --script=vulscan/vulscan.nse $ip -p $port)" 
+                echo "$(nmap -oN $savelocation -Pn  -sV -A --script=vulscan/vulscan.nse $ip -p $port)" 
             else
-                echo "$(nmap -sV -A --script=vulscan/vulscan.nse $ip -p $port)" 
+                echo "$(nmap -sV -A -Pn  --script=vulscan/vulscan.nse $ip -p $port)" 
                 fi
             
        
@@ -67,13 +67,16 @@ elif [ $option = "2" ]
             if [ $save = "y" ]
                     then
                     read -p  "[+]Location: " savelocation
-                    echo "$(nmap -oN $savelocation -sV -A --script=vulscan/vulscan.nse $ip)" 
+                    echo "$(nmap -oN $savelocation -Pn  -sV -A --script=vulscan/vulscan.nse $ip)" 
                 else
-                    echo "$(nmap -sV -A --script=vulscan/vulscan.nse $ip)" 
+                    echo "$(nmap -sV -A -Pn  --script=vulscan/vulscan.nse $ip)" 
                     fi
 fi
 fi
 
 echo "BYE BYE"
+
+
+
 
 
